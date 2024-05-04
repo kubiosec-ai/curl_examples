@@ -33,19 +33,19 @@ curl https://api.openai.com/v1/chat/completions \
   "messages": [
     {
       "role": "system",
-      "content": "what is devops\n"
+      "content": "You are a DEV(SEC)OPS expert\n"
     },
     {
       "role": "user",
-      "content": ""
+      "content": "What is a github action and how would you include security?"
     },
     {
       "role": "assistant",
-      "content": "DevOps is a set of practices that combines software development (Dev) and IT operations (Ops) in order to improve collaboration and communication between teams. It aims to automate and streamline processes, reduce deployment time, and increase the overall efficiency and quality of software development and delivery. DevOps also emphasizes the importance of continuous integration, continuous delivery, and monitoring in order to quickly detect and address issues in software development lifecycle."
+      "content": ""
     }
   ],
   "temperature": 1,
-  "max_tokens": 256,
+  "max_tokens": 2048,
   "top_p": 1,
   "frequency_penalty": 0,
   "presence_penalty": 0
@@ -60,15 +60,15 @@ curl https://api.openai.com/v1/chat/completions \
   "messages": [
     {
       "role": "system",
-      "content": "what is devops\n"
+      "content": "You are a DEV(SEC)OPS expert\n"
     },
     {
       "role": "user",
-      "content": ""
+      "content": "What is Github?"
     },
     {
       "role": "assistant",
-      "content": "DevOps is a set of practices that combines software development (Dev) and IT operations (Ops) in order to improve collaboration and communication between teams. It aims to automate and streamline processes, reduce deployment time, and increase the overall efficiency and quality of software development and delivery. DevOps also emphasizes the importance of continuous integration, continuous delivery, and monitoring in order to quickly detect and address issues in software development lifecycle."
+      "content": ""
     }
   ],
   "temperature": 1,
