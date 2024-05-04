@@ -1,4 +1,4 @@
-# curl_examples
+# curl examples
 ```
 OPENAI_API_KEY=xxxxxx
 ```
