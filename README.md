@@ -24,6 +24,33 @@ curl https://api.openai.com/v1/completions \
 -H "Authorization: Bearer $YOUR_API_KEY" \
 -d '{"model": "davinci-002", "prompt": "what is devops?",  "max_tokens": 300}' >test.json
 ```
+```
+curl https://api.openai.com/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $YOUR_API_KEY" \
+  -d '{
+  "model": "gpt-3.5-turbo",
+  "messages": [
+    {
+      "role": "system",
+      "content": "what is devops\n"
+    },
+    {
+      "role": "user",
+      "content": ""
+    },
+    {
+      "role": "assistant",
+      "content": "DevOps is a set of practices that combines software development (Dev) and IT operations (Ops) in order to improve collaboration and communication between teams. It aims to automate and streamline processes, reduce deployment time, and increase the overall efficiency and quality of software development and delivery. DevOps also emphasizes the importance of continuous integration, continuous delivery, and monitoring in order to quickly detect and address issues in software development lifecycle."
+    }
+  ],
+  "temperature": 1,
+  "max_tokens": 256,
+  "top_p": 1,
+  "frequency_penalty": 0,
+  "presence_penalty": 0
+}'
+```
 ## Image generation
 ```
 curl https://api.openai.com/v1/images/generations \
