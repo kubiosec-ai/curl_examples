@@ -136,3 +136,80 @@ curl https://api.openai.com/v1/threads/thread_IepEBcsZ8xDOagph4Y3BBgC9/runs \
   "tool_choice": "auto"
 }
 ```
+### Step 5: List the messages
+```
+curl https://api.openai.com/v1/threads/thread_IepEBcsZ8xDOagph4Y3BBgC9/messages \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $OPENAI_API_KEY" \
+  -H "OpenAI-Beta: assistants=v2"
+```
+```
+{
+  "object": "list",
+  "data": [
+    {
+      "id": "msg_fp0hGG1crpUawGxClbxd7pDq",
+      "object": "thread.message",
+      "created_at": 1714821183,
+      "assistant_id": "asst_yIoFBvGm8p67BHxTWcYQjVEk",
+      "thread_id": "thread_IepEBcsZ8xDOagph4Y3BBgC9",
+      "run_id": "run_3YC6bWXpe58F8QMLc5m3binG",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": {
+            "value": "The solution to the equation `3x + 11 = 14` is `x = 1.0`, Jane Doe.",
+            "annotations": []
+          }
+        }
+      ],
+      "attachments": [],
+      "metadata": {}
+    },
+    {
+      "id": "msg_LvCfDuIOvMgzsvxLyulEp4le",
+      "object": "thread.message",
+      "created_at": 1714821177,
+      "assistant_id": "asst_yIoFBvGm8p67BHxTWcYQjVEk",
+      "thread_id": "thread_IepEBcsZ8xDOagph4Y3BBgC9",
+      "run_id": "run_3YC6bWXpe58F8QMLc5m3binG",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": {
+            "value": "Sure, Jane Doe. \n\nTo solve the equation `3x + 11 = 14`, you need to isolate the variable `x`. Here are the steps:\n\n1. Subtract 11 from both sides of the equation, so it becomes `3x = 14 - 11`.\n2. Divide both sides of the equation by 3 to solve for `x`.\n\nLet's calculate it.",
+            "annotations": []
+          }
+        }
+      ],
+      "attachments": [],
+      "metadata": {}
+    },
+    {
+      "id": "msg_0cK0r1FOTLs3yKYDv6XLvwS1",
+      "object": "thread.message",
+      "created_at": 1714820996,
+      "assistant_id": null,
+      "thread_id": "thread_IepEBcsZ8xDOagph4Y3BBgC9",
+      "run_id": null,
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": {
+            "value": "I need to solve the equation `3x + 11 = 14`. Can you help me?",
+            "annotations": []
+          }
+        }
+      ],
+      "attachments": [],
+      "metadata": {}
+    }
+  ],
+  "first_id": "msg_fp0hGG1crpUawGxClbxd7pDq",
+  "last_id": "msg_0cK0r1FOTLs3yKYDv6XLvwS1",
+  "has_more": false
+}
+```
