@@ -49,7 +49,7 @@ curl https://api.openai.com/v1/chat/completions \
   "top_p": 1,
   "frequency_penalty": 0,
   "presence_penalty": 0
-}'
+}' | jq -r '.choices[0].message.content'
 ```
 ```
 curl https://api.openai.com/v1/chat/completions \
