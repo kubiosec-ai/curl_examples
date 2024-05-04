@@ -2,6 +2,7 @@
 ```
 YOUR_API_KEY=xxxxxx
 ```
+## Embedding
 ```
 curl https://api.openai.com/v1/embeddings \
   -X POST \
@@ -10,27 +11,20 @@ curl https://api.openai.com/v1/embeddings \
   -d '{"input": "The food was delicious and the waiter...",
        "model": "text-embedding-ada-002"}'
 ```
+## Completion
 ```
 curl https://api.openai.com/v1/completions \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer $YOUR_API_KEY" \
--d '{"model": "text-davinci-003", "prompt": "what is devops?",  "max_tokens": 300}' | jq -r '.choices[0].text'
+-d '{"model": "davinci-002", "prompt": "what is devops?",  "max_tokens": 300}' | jq -r '.choices[0].text'
 ```
 ```
 curl https://api.openai.com/v1/completions \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer $YOUR_API_KEY" \
--d '{"model": "text-davinci-003", "prompt": "what is devops?",  "max_tokens": 300}' >test.json
+-d '{"model": "davinci-002", "prompt": "what is devops?",  "max_tokens": 300}' >test.json
 ```
-```
-curl -X POST -H "Content-Type: application/json" \
--H "Authorization: Bearer $YOUR_API_KEY"  \
--d '{
-  "model": "text-davinci-002",
-  "prompt": "What is the capital of France?",
-  "temperature": 0.5
-}' https://api.openai.com/v1/engines/davinci/completions
-```
+## Image generation
 ```
 curl https://api.openai.com/v1/images/generations \
   -H 'Content-Type: application/json' \
@@ -60,3 +54,4 @@ curl https://api.openai.com/v1/images/generations \
   "n": 2,
   "size": "1024x1024"
 }'
+```
