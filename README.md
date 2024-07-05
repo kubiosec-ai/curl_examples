@@ -109,3 +109,15 @@ curl https://api.openai.com/v1/images/generations \
   "size": "1024x1024"
 }'
 ```
+## Gemini
+```
+export GOOGLE_API_KEY=xxxxxxxxxxxx
+curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=$GOOGLE_API_KEY" \
+    -H 'Content-Type: application/json' \
+    -X POST \
+    -d '{
+      "contents": [{
+        "parts":[{"text": "Give me python code to sort a list."}]
+        }]
+       }'
+```
